@@ -1,5 +1,6 @@
 # Directed Graph Editor
 
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/MrF3lix/directed-graph-editor/CI%20-%20Build?label=build)](https://github.com/MrF3lix/directed-graph-editor/actions/workflows/ci.build.yml)
 [![GitHub issues](https://img.shields.io/github/issues/MrF3lix/directed-graph-editor)](https://github.com/MrF3lix/directed-graph-editor/issues)
 [![GitHub package.json version](https://img.shields.io/github/package-json/v/MrF3lix/directed-graph-editor)](https://github.com/MrF3lix/directed-graph-editor)
 [![GitHub](https://img.shields.io/github/license/MrF3lix/directed-graph-editor)]([.](https://raw.githubusercontent.com/MrF3lix/directed-graph-editor/main/license.txt))
