@@ -44,11 +44,16 @@ export const App = () => {
     });
   };
 
+  const reset = () => {
+    setGraph(initial);
+  };
+
   return (
     <React.Fragment>
       <div className="control__container">
         <button onClick={createNode} className="button--primary">Add Node</button>
         <button onClick={createEdge} disabled={selected === null}>Add Edge</button>
+        <button onClick={reset}>Reset</button>
       </div>
       <Graph graph={graph} setGraph={setGraph} selected={selected} setSelected={setSelected} />
       <GraphJsonEditor graph={graph} setGraph={setGraph} />
