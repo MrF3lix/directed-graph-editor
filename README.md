@@ -37,13 +37,12 @@ Supported Node Types:
 - `empty`
 - `end`
 
-Changes from the JSON editor will be applied to the ui editor and vice versa, except for the coordinates.
+Changes from the JSON editor will be applied to the ui editor and vice versa.
 
 ![Screenshot DGE](./img/screenshot.png)
 
 ## Known Issues
 
-- When Moving a node the coordinates are not updated in the JSON Editor.
 - Selecting an Edge is only possible if you click directly on the center of the arrow.
 
 ## Contribute

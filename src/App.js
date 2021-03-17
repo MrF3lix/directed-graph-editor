@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { GraphJsonEditor } from './GraphJsonEditor';
 import { Graph } from './Graph';
 import initial from './sample.json';
+import { useLocalStorage } from 'react-use';
 
 export const App = () => {
-  const [graph, setGraph] = useState(initial);
+  const [graph, setGraph] = useLocalStorage('graphData', initial);
   const [selected, setSelected] = useState();
+
 
   const createNode = () => {
     let newNode = {

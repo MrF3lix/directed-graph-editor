@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GraphView } from 'react-digraph';
 
 const GraphConfig = {
@@ -56,6 +56,16 @@ export const Graph = ({ graph, setGraph, selected, setSelected }) => {
   const NodeSubtypes = GraphConfig.NodeSubtypes;
   const EdgeTypes = GraphConfig.EdgeTypes;
 
+  const onUpdateNode = node => {
+    setGraph({
+      ...graph,
+      nodes: [
+        ...graph.nodes.filter(n => n.id !== node.id),
+        node
+      ]
+    });
+  };
+
   const onDeleteNode = node => {
     setGraph({
       ...graph,
@@ -106,6 +116,7 @@ export const Graph = ({ graph, setGraph, selected, setSelected }) => {
         onSelectNode={setSelected}
         onSelectEdge={setSelected}
         onSwapEdge={onSwapEdge}
+        onUpdateNode={onUpdateNode}
       />
     </div>
   );
