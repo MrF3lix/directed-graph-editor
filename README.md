@@ -18,6 +18,29 @@ View at https://directed-graph-editor.vercel.app/
 3. Run `npm install` to install dependencies
 4. Run `npm start` to start the development server.
 
+## How to use
+
+Visit the [demo site](https://directed-graph-editor.vercel.app/) to try it out.
+
+- Move Node
+  - Select a node and move it to where you want it
+- Delete Node
+  - Select a node and press backspace or delete
+- Add Node
+  - Press the "Add Node" button. New node will be created at the coordinates (0,0).
+- Change Text / Type
+  - Use the JSON Editor to change these properties.
+
+Supported Node Types:
+
+- `start`
+- `empty`
+- `end`
+
+Changes from the JSON editor will be applied to the ui editor and vice versa, except for the coordinates.
+
+![Screenshot DGE](./img/screenshot.png)
+
 ## Known Issues
 
 - When Moving a node the coordinates are not updated in the JSON Editor.
