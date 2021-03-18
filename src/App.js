@@ -1,16 +1,8 @@
 import React, { useState } from 'react';
 import { GraphJsonEditor } from './GraphJsonEditor';
-import { Graph } from './Graph';
+import { getNextIndex, Graph } from './Graph';
 import initial from './sample.json';
 import { useLocalStorage } from 'react-use';
-
-const getNextIndex = (graph) => {
-  if (graph.nodes.length === 0) {
-    return 1;
-  }
-
-  return graph.nodes[graph.nodes.length - 1].id + 1;
-};
 
 export const App = () => {
   const [graph, setGraph] = useLocalStorage('graphData', initial);

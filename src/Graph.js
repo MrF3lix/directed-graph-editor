@@ -1,6 +1,14 @@
 import React from 'react';
 import { GraphView } from 'react-digraph';
 
+export const getNextIndex = (graph) => {
+  if (graph.nodes.length === 0) {
+    return 1;
+  }
+
+  return graph.nodes[graph.nodes.length - 1].id + 1;
+};
+
 const GraphConfig = {
   NodeTypes: {
     start: {
@@ -80,8 +88,22 @@ export const Graph = ({ graph, setGraph, selected, setSelected }) => {
     });
   };
 
-  const onCreateNode = (...rest) => {
-    console.log(rest);
+  const onCreateNode = (x, y) => {
+    const newNode = {
+      id: getNextIndex(graph),
+      x,
+      y,
+      title: 'New Node',
+      type: 'empty'
+    };
+
+    setGraph({
+      ...graph,
+      nodes: [
+        ...graph.nodes,
+        newNode
+      ]
+    });
   };
 
   const onCreateEdge = (sourceNode, targetNode) => {

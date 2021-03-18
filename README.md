@@ -28,9 +28,11 @@ Visit the [demo site](https://directed-graph-editor.vercel.app/) to try it out.
 - Delete Node
   - Select a node and press **backspace** or **delete**
 - Add Node
+  - Hold **shift** and click where you want to create the node.
   - Press the "Add Node" button. New node will be created at the coordinates (0,0).
 - Add Edge
   - Hold **shift** and drag the edge from one node to another.
+  - OR Press the "Add Edge" button when a Node is selected. It will create an edge from the selected node to the latest added node.
 - Change Text / Type
   - Use the JSON Editor to change these properties.
 
