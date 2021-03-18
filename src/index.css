@@ -24,13 +24,16 @@ code {
   display: grid;
   grid-auto-flow: column;
   grid-template-rows: 60px 1fr;
-  grid-template-columns: 1fr 30%;
+  grid-template-columns: 1fr 35%;
 }
 
-@media (max-width: 1200px) { 
+@media (max-width: 960px) { 
   #root {
     grid-template-rows: 60px 1fr 1fr;
     grid-template-columns: 1fr;
+  }
+  #root {
+    min-height: 100vh;
   }
 }
 
