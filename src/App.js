@@ -5,6 +5,10 @@ import initial from './sample.json';
 import { useLocalStorage } from 'react-use';
 
 const getNextIndex = (graph) => {
+  if (graph.nodes.length === 0) {
+    return 1;
+  }
+
   return graph.nodes[graph.nodes.length - 1].id + 1;
 };
 
@@ -34,7 +38,7 @@ export const App = () => {
   const createEdge = () => {
     let newEdge = {
       source: selected.id,
-      target: 3,
+      target: graph.nodes[graph.nodes.length - 1].id,
       type: 'default',
       handleText: 'X'
     };
