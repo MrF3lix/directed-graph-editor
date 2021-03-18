@@ -22,13 +22,28 @@ code {
   width: 100%;
   height: 100vh;
   display: grid;
+  grid-auto-flow: column;
   grid-template-rows: 60px 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 30%;
+}
+
+@media (max-width: 1200px) { 
+  #root {
+    grid-template-rows: 60px 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 960px) { 
+  #root {
+    min-height: 100vh;
+  }
 }
 
 #graph {
   width: 100%;
   height: 100%;
+  min-height: 500px;
 }
 
 .control__container {
