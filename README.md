@@ -26,9 +26,11 @@ Visit the [demo site](https://directed-graph-editor.vercel.app/) to try it out.
 - Move Node
   - Select a node and move it to where you want it
 - Delete Node
-  - Select a node and press backspace or delete
+  - Select a node and press **backspace** or **delete**
 - Add Node
   - Press the "Add Node" button. New node will be created at the coordinates (0,0).
+- Add Edge
+  - Hold **shift** and drag the edge from one node to another.
 - Change Text / Type
   - Use the JSON Editor to change these properties.
 

@@ -80,11 +80,34 @@ export const Graph = ({ graph, setGraph, selected, setSelected }) => {
     });
   };
 
-  const onSwapEdge = (sourceNode, targetNode, edge) => {
+  const onCreateNode = (...rest) => {
+    console.log(rest);
+  };
+
+  const onCreateEdge = (sourceNode, targetNode) => {
     const newEdge = {
       source: sourceNode.id,
       target: targetNode.id,
-      type: 'emptyEdge'
+      type: 'default',
+      handleText: 'X'
+    };
+
+    setGraph({
+      ...graph,
+      edges: [
+        ...graph.edges,
+        newEdge
+      ]
+    });
+  };
+
+  const onSwapEdge = (sourceNode, targetNode, edge) => {
+    console.log(sourceNode, targetNode, edge);
+
+    const newEdge = {
+      source: sourceNode.id,
+      target: targetNode.id,
+      ...edge
     };
 
     setGraph({
@@ -117,6 +140,8 @@ export const Graph = ({ graph, setGraph, selected, setSelected }) => {
         onSelectEdge={setSelected}
         onSwapEdge={onSwapEdge}
         onUpdateNode={onUpdateNode}
+        onCreateEdge={onCreateEdge}
+        onCreateNode={onCreateNode}
       />
     </div>
   );

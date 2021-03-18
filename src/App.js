@@ -4,6 +4,10 @@ import { Graph } from './Graph';
 import initial from './sample.json';
 import { useLocalStorage } from 'react-use';
 
+const getNextIndex = (graph) => {
+  return graph.nodes[graph.nodes.length - 1].id + 1;
+};
+
 export const App = () => {
   const [graph, setGraph] = useLocalStorage('graphData', initial);
   const [selected, setSelected] = useState();
@@ -11,7 +15,7 @@ export const App = () => {
 
   const createNode = () => {
     let newNode = {
-      id: Date.now(),
+      id: getNextIndex(graph),
       title: 'New Node',
       x: 0,
       y: 0,

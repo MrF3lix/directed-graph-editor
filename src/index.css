@@ -43,6 +43,7 @@ button {
   border: 1px solid #7a7a7a;
   border-radius: 3px;
   margin: 0 10px 0 0;
+  cursor: pointer;
 }
 
 .button--primary {
@@ -53,4 +54,8 @@ button {
 
 button:hover {
   border-color: #0043d4d7;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
